@@ -11,7 +11,7 @@ namespace AdventOfCode2022.Day1
         public static void Execute()
         {
 
-            var inputFile = File.ReadAllLines("C:\\Users\\c11995a\\source\\repos\\AdventOfCode2022\\AdventOfCode2022\\Day1\\Day1Input.txt");
+            var inputFile = File.ReadAllLines("C:\\Users\\c11995a\\source\\repos\\AdventOfCode22\\AdventOfCode22\\Day1\\Day1Input.txt");
 
             var input = new List<string>(inputFile);
 
@@ -43,12 +43,12 @@ namespace AdventOfCode2022.Day1
             //Console.WriteLine($"Elf Total Calories: {elfCalories}");
 
             highestElfCalories = Math.Max(highestElfCalories, elfCalories);
-            Console.WriteLine($"Part One: The most calories an elf carries is {highestElfCalories}");
+            Console.WriteLine($"The highest number of calories that any one elf carrries is: {highestElfCalories} calories. (PART 1) ");
 
             elfList.Sort((a, b) => b.CompareTo(a));
-            Console.WriteLine($"{elfList[0]}, {elfList[1]}, {elfList[2]}");
+            Console.WriteLine($"\nThe number of calories for the 3 elves with the largest number of calories are: \n1: {elfList[0]} calories \n2: {elfList[1]} calories \n3: {elfList[2]} calories");
             int totalCalories = elfList[0] + elfList[1] + elfList[2];
-            Console.WriteLine(totalCalories);
+            Console.WriteLine($"\nThe total number of calories between these 3 elves is: {totalCalories} calories. (PART 2) \n");
         }
 
     }
