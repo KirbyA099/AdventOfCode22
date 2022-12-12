@@ -19,8 +19,11 @@ class Program
         Day2Part1.Execute();
         Day2Part2.Execute();
 
-        Console.WriteLine("DAY 3: \n");
+        Console.WriteLine("DAY 3:\n");
         Day3Part1.Execute();
+        Day3Part2.Execute();
+
+        Console.WriteLine("DAY 4:\n");
 
     }
 }

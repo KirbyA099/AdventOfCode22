@@ -14,11 +14,57 @@ namespace AdventOfCode22.Day3
 
             var input = new List<string>(inputFile);
 
-            foreach(var line in input)
-            {
+            int charValue;
+            int priorityValue = 0;
 
-            }    
-#
+            int lineCount = 0;
+            var lines = new string[3];
+
+
+            foreach (var line in input)
+            {
+                if (lineCount < 3)
+                {
+                    lines[lineCount] = line;
+                    lineCount++;
+                }
+
+                if (lineCount == 3)
+                {
+                    var characterMatch = new List<char>();
+
+                    foreach (char c in lines[0])
+                        if (lines[1].Contains(c))
+                        {
+                            characterMatch.Add(c);
+                        }
+
+                    foreach (char c in lines[2])
+                        if (characterMatch.Contains(c))
+                        {
+                            if (Char.IsLower(c))
+                            {
+                                charValue = char.ToLower(c) - 96;
+                                //Console.WriteLine(charValue);
+                                priorityValue += charValue;
+                                break;
+                            }
+                            else
+                            {
+                                charValue = char.ToUpper(c) - 38;
+                                //Console.WriteLine(charValue);
+                                priorityValue += charValue;
+                                break;
+                            }
+                        }
+
+                    lines = new string[3];
+                    lineCount = 0;
+
+                }
+
+            }
+            Console.WriteLine($"The sum of the priorities of each three-Elf groups is: {priorityValue}\n");
         }
 
     }

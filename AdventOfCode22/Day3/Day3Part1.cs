@@ -43,7 +43,7 @@ namespace AdventOfCode22.Day3
                     }
 
                 }
-            Console.WriteLine($"The sum of the items is: {priorityValue}");
+            Console.WriteLine($"The sum of the items is: {priorityValue}. (PART 1)\n");
                        
         }
     }
