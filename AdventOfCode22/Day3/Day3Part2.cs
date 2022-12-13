@@ -64,7 +64,7 @@ namespace AdventOfCode22.Day3
                 }
 
             }
-            Console.WriteLine($"The sum of the priorities of each three-Elf groups is: {priorityValue}\n");
+            Console.WriteLine($"The sum of the priorities of each three-Elf groups is: {priorityValue}. (PART 2)\n");
         }
 
     }
